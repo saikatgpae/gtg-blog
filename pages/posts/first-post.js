@@ -1,12 +1,17 @@
 import Link from "next/link";
-const FirstPost= () =>{
-    return (
-        <>
-            <h4><Link href="/">Home</Link></h4>
-            <h1>hi</h1>
-        </>
-    );
+import Head from "next/head";
+import Script from "next/script";
 
-  };
-
-export default FirstPost;
+export default function FirstPost() {
+  return (
+    <>
+      <Head>
+        <title>First Post</title>
+      </Head>
+      <h1>First Post</h1>
+      <h2>
+        <Link href="/">← Back to home</Link>
+      </h2>
+    </>
+  );
+}
